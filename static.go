@@ -52,7 +52,6 @@ func (g *StaticSync) Process(bloxConfig string) error {
 }
 
 func (g *StaticSync) syncDirectory(staticDir string) error {
-
 	cwd, err := os.Getwd()
 	if err != nil {
 		g.logger.Error("Working directory error", "error", err.Error())

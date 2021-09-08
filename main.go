@@ -29,7 +29,7 @@ func main() {
 		logger: logger,
 	}
 	// pluginMap is the map of plugins we can dispense.
-	var pluginMap = map[string]plugin.Plugin{
+	pluginMap := map[string]plugin.Plugin{
 		"staticsync": &plugins.PostbuildPlugin{Impl: staticSync},
 		"datasync":   &plugins.PostbuildPlugin{Impl: dataSync},
 	}
