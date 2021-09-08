@@ -82,10 +82,5 @@ brews:
     homepage: "https://github.com/cueblox/"
     description: "CueBlox"
     license: "MIT"
-    test: |
-      system "#{bin}/blox -v"
     install: |-
-      bin.install "blox"
-      bash_completion.install "completions/blox.bash" => "blox"
-      zsh_completion.install "completions/blox.zsh" => "_blox"
-      fish_completion.install "completions/blox.fish"
+      bin.install "staticsync"
