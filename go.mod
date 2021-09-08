@@ -26,5 +26,4 @@ require (
 	github.com/pterm/pterm v0.12.30 // indirect
 	github.com/spf13/cobra v1.2.1 // indirect
 	google.golang.org/genproto v0.0.0-20210903162649-d08c68adba83 // indirect
-	mvdan.cc/gofumpt v0.1.1 // indirect
 )
