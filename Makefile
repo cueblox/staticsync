@@ -16,7 +16,6 @@ bin/golangci-lint:
 setup: bin/golangci-lint
 	go mod tidy
 	git config core.hooksPath .githooks
-	GO111MODULE=on go get mvdan.cc/gofumpt
 
 .PHONY: setup
 
