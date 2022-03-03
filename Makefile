@@ -9,11 +9,15 @@ export DOCKER_BUILDKIT
 export PATH := ./bin:$(PATH)
 export GO111MODULE := on
 
+gofumpt:
+	go install mvdan.cc/gofumpt@latest
+
+
 bin/golangci-lint:
 	curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.42.1
 
 # Install all the build and lint dependencies
-setup: bin/golangci-lint
+setup: bin/golangci-lint gofumpt
 	go mod tidy
 	git config core.hooksPath .githooks
 
