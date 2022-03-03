@@ -9,7 +9,6 @@ import (
 	"path/filepath"
 
 	"github.com/cueblox/blox"
-	"github.com/cueblox/blox/content"
 	"github.com/hashicorp/go-hclog"
 	"gocloud.dev/blob"
 
@@ -27,7 +26,7 @@ type StaticSync struct {
 
 func (g *StaticSync) Process(bloxConfig string) error {
 	g.logger.Debug("message from CloudSync.Process")
-	cfg, err := blox.NewConfig(content.BaseConfig)
+	cfg, err := blox.NewConfig(blox.BaseConfig)
 	if err != nil {
 		g.logger.Error("loading base config", "error", err.Error())
 		return err
